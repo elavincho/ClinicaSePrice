@@ -2,6 +2,7 @@ package com.clinicaseprice.seprice.Entidad;
 
 import jakarta.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -32,12 +33,12 @@ public class Paciente {
     private String modalidadPago;
     
     //Establecer relaciones entre clases
-    private Turno nroTurno;
+    private List<Turno> turnos;
 
     public Paciente() {
     }
 
-    public Paciente(Integer idPaciente, int nroPaciente, String nombrePaciente, String apellidoPaciente, Date fechaNacimiento, String calle, String nroCasa, String localidad, String provincia, String pais, String telefono, String celular, String email, String estadoPaciente, String tipoCobertura, String modalidadPago, Turno nroTurno) {
+    public Paciente(Integer idPaciente, int nroPaciente, String nombrePaciente, String apellidoPaciente, Date fechaNacimiento, String calle, String nroCasa, String localidad, String provincia, String pais, String telefono, String celular, String email, String estadoPaciente, String tipoCobertura, String modalidadPago, List<Turno> turnos) {
         this.idPaciente = idPaciente;
         this.nroPaciente = nroPaciente;
         this.nombrePaciente = nombrePaciente;
@@ -54,7 +55,7 @@ public class Paciente {
         this.estadoPaciente = estadoPaciente;
         this.tipoCobertura = tipoCobertura;
         this.modalidadPago = modalidadPago;
-        this.nroTurno = nroTurno;
+        this.turnos = turnos;
     }
 
     public Integer getIdPaciente() {
@@ -185,13 +186,12 @@ public class Paciente {
         this.modalidadPago = modalidadPago;
     }
 
-    public Turno getNroTurno() {
-        return nroTurno;
+    public List<Turno> getTurnos() {
+        return turnos;
     }
 
-    public void setNroTurno(Turno nroTurno) {
-        this.nroTurno = nroTurno;
+    public void setTurnos(List<Turno> turnos) {
+        this.turnos = turnos;
     }
-
     
 }

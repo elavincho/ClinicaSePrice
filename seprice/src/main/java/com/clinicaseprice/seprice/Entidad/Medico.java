@@ -1,6 +1,7 @@
 package com.clinicaseprice.seprice.Entidad;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 /**
  *
@@ -29,13 +30,13 @@ public class Medico {
     private String estadoMedico;
     
     // Establecer relaciones entre clases
-    private Consultorio nroConsultorio;
-    private Especialidad nroEspecialidad;
+    private List<Consultorio> consultorios;
+    private List<Especialidad> especialidades;
     
     public Medico() {
     }
 
-    public Medico(Integer idMedico, int nroMedico, String agenda, String horario, String nombreMedico, String apellidoMedico, String calle, String nroCasa, String localidad, String provincia, String pais, String telefono, String celular, String email, String estadoMedico, Consultorio nroConsultorio, Especialidad nroEspecialidad) {
+    public Medico(Integer idMedico, int nroMedico, String agenda, String horario, String nombreMedico, String apellidoMedico, String calle, String nroCasa, String localidad, String provincia, String pais, String telefono, String celular, String email, String estadoMedico, List<Consultorio> consultorios, List<Especialidad> especialidades) {
         this.idMedico = idMedico;
         this.nroMedico = nroMedico;
         this.agenda = agenda;
@@ -51,8 +52,8 @@ public class Medico {
         this.celular = celular;
         this.email = email;
         this.estadoMedico = estadoMedico;
-        this.nroConsultorio = nroConsultorio;
-        this.nroEspecialidad = nroEspecialidad;
+        this.consultorios = consultorios;
+        this.especialidades = especialidades;
     }
 
     public Integer getIdMedico() {
@@ -175,20 +176,20 @@ public class Medico {
         this.estadoMedico = estadoMedico;
     }
 
-    public Consultorio getNroConsultorio() {
-        return nroConsultorio;
+    public List<Consultorio> getConsultorios() {
+        return consultorios;
     }
 
-    public void setNroConsultorio(Consultorio nroConsultorio) {
-        this.nroConsultorio = nroConsultorio;
+    public void setConsultorios(List<Consultorio> consultorios) {
+        this.consultorios = consultorios;
     }
 
-    public Especialidad getNroEspecialidad() {
-        return nroEspecialidad;
+    public List<Especialidad> getEspecialidades() {
+        return especialidades;
     }
 
-    public void setNroEspecialidad(Especialidad nroEspecialidad) {
-        this.nroEspecialidad = nroEspecialidad;
+    public void setEspecialidades(List<Especialidad> especialidades) {
+        this.especialidades = especialidades;
     }
 
 }
