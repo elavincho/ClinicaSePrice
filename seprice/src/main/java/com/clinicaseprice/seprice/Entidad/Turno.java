@@ -20,23 +20,27 @@ public class Turno {
     private String horaTurno;
     private String estadoTurno;
     
-    // Establecer relaciones entre clases
-    private Especialidad nroEspecialidad;
-    private Medico nroMedico;
-    private Paciente nroPaciente;
+    @ManyToOne
+    private Especialidad especialidad;
+    
+    @ManyToOne
+    private Medico medico;
+    
+    @ManyToOne
+    private Paciente paciente;
 
     public Turno() {
     }
 
-    public Turno(Integer idTurno, int nroTurno, Date fechaTurno, String horaTurno, String estadoTurno, Especialidad nroEspecialidad, Medico nroMedico, Paciente nroPaciente) {
+    public Turno(Integer idTurno, int nroTurno, Date fechaTurno, String horaTurno, String estadoTurno, Especialidad especialidad, Medico medico, Paciente paciente) {
         this.idTurno = idTurno;
         this.nroTurno = nroTurno;
         this.fechaTurno = fechaTurno;
         this.horaTurno = horaTurno;
         this.estadoTurno = estadoTurno;
-        this.nroEspecialidad = nroEspecialidad;
-        this.nroMedico = nroMedico;
-        this.nroPaciente = nroPaciente;
+        this.especialidad = especialidad;
+        this.medico = medico;
+        this.paciente = paciente;
     }
 
     public Integer getIdTurno() {
@@ -79,28 +83,28 @@ public class Turno {
         this.estadoTurno = estadoTurno;
     }
 
-    public Especialidad getNroEspecialidad() {
-        return nroEspecialidad;
+    public Especialidad getEspecialidad() {
+        return especialidad;
     }
 
-    public void setNroEspecialidad(Especialidad nroEspecialidad) {
-        this.nroEspecialidad = nroEspecialidad;
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
     }
 
-    public Medico getNroMedico() {
-        return nroMedico;
+    public Medico getMedico() {
+        return medico;
     }
 
-    public void setNroMedico(Medico nroMedico) {
-        this.nroMedico = nroMedico;
+    public void setMedico(Medico medico) {
+        this.medico = medico;
     }
 
-    public Paciente getNroPaciente() {
-        return nroPaciente;
+    public Paciente getPaciente() {
+        return paciente;
     }
 
-    public void setNroPaciente(Paciente nroPaciente) {
-        this.nroPaciente = nroPaciente;
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
-    
+
 }

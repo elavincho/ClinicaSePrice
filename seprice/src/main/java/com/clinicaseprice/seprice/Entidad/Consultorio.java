@@ -1,6 +1,7 @@
 package com.clinicaseprice.seprice.Entidad;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 /**
  *
@@ -16,17 +17,17 @@ public class Consultorio {
     private int nroConsultorio;
     private boolean estadoConsultorio;
     
-    // Establecer relaciones entre clases
-    private Medico nroMedico;
+    @OneToMany
+    private List<Medico> medico;
 
     public Consultorio() {
     }
 
-    public Consultorio(Integer idConsultorio, int nroConsultorio, boolean estadoConsultorio, Medico nroMedico) {
+    public Consultorio(Integer idConsultorio, int nroConsultorio, boolean estadoConsultorio, List<Medico> medico) {
         this.idConsultorio = idConsultorio;
         this.nroConsultorio = nroConsultorio;
         this.estadoConsultorio = estadoConsultorio;
-        this.nroMedico = nroMedico;
+        this.medico = medico;
     }
 
     public Integer getIdConsultorio() {
@@ -53,12 +54,12 @@ public class Consultorio {
         this.estadoConsultorio = estadoConsultorio;
     }
 
-    public Medico getNroMedico() {
-        return nroMedico;
+    public List<Medico> getMedico() {
+        return medico;
     }
 
-    public void setNroMedico(Medico nroMedico) {
-        this.nroMedico = nroMedico;
+    public void setMedico(List<Medico> medico) {
+        this.medico = medico;
     }
 
 }

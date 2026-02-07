@@ -32,7 +32,7 @@ public class Paciente {
     private String tipoCobertura;
     private String modalidadPago;
     
-    //Establecer relaciones entre clases
+    @OneToMany
     private List<Turno> turnos;
 
     public Paciente() {

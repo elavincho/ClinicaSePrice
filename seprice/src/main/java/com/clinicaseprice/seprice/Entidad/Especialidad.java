@@ -18,17 +18,18 @@ public class Especialidad {
     private String nombreEspecialidad;
     private String estadoEspecialidad;
     
-    // Establecer relaciones entre clases Creo que no es necesario, revisar
-    //private Medico nroMedico;
+    @ManyToOne
+    private Medico medico;
 
     public Especialidad() {
     }
 
-    public Especialidad(Integer idEspecialidad, int nroEspecialidad, String nombreEspecialidad, String estadoEspecialidad) {
+    public Especialidad(Integer idEspecialidad, int nroEspecialidad, String nombreEspecialidad, String estadoEspecialidad, Medico medico) {
         this.idEspecialidad = idEspecialidad;
         this.nroEspecialidad = nroEspecialidad;
         this.nombreEspecialidad = nombreEspecialidad;
         this.estadoEspecialidad = estadoEspecialidad;
+        this.medico = medico;
     }
 
     public Integer getIdEspecialidad() {
@@ -61,6 +62,14 @@ public class Especialidad {
 
     public void setEstadoEspecialidad(String estadoEspecialidad) {
         this.estadoEspecialidad = estadoEspecialidad;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
     }
 
 }

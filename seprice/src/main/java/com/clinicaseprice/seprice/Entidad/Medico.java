@@ -29,14 +29,16 @@ public class Medico {
     private String email;
     private String estadoMedico;
     
-    // Establecer relaciones entre clases
+    @OneToMany(mappedBy = "medico")
     private List<Consultorio> consultorios;
-    private List<Especialidad> especialidades;
+    
+    @OneToMany(mappedBy = "medico")
+    private List<Especialidad> especialidad;
     
     public Medico() {
     }
 
-    public Medico(Integer idMedico, int nroMedico, String agenda, String horario, String nombreMedico, String apellidoMedico, String calle, String nroCasa, String localidad, String provincia, String pais, String telefono, String celular, String email, String estadoMedico, List<Consultorio> consultorios, List<Especialidad> especialidades) {
+    public Medico(Integer idMedico, int nroMedico, String agenda, String horario, String nombreMedico, String apellidoMedico, String calle, String nroCasa, String localidad, String provincia, String pais, String telefono, String celular, String email, String estadoMedico, List<Consultorio> consultorios, List<Especialidad> especialidad) {
         this.idMedico = idMedico;
         this.nroMedico = nroMedico;
         this.agenda = agenda;
@@ -53,7 +55,7 @@ public class Medico {
         this.email = email;
         this.estadoMedico = estadoMedico;
         this.consultorios = consultorios;
-        this.especialidades = especialidades;
+        this.especialidad = especialidad;
     }
 
     public Integer getIdMedico() {
@@ -184,12 +186,12 @@ public class Medico {
         this.consultorios = consultorios;
     }
 
-    public List<Especialidad> getEspecialidades() {
-        return especialidades;
+    public List<Especialidad> getEspecialidad() {
+        return especialidad;
     }
 
-    public void setEspecialidades(List<Especialidad> especialidades) {
-        this.especialidades = especialidades;
+    public void setEspecialidad(List<Especialidad> especialidad) {
+        this.especialidad = especialidad;
     }
 
 }
