@@ -10,3 +10,52 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+
+.centrado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin30 {
+    margin: 30px;
+}
+
+.margin-top20 {
+    margin-top: 20px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.margin-right30 {
+    margin-right: 30px;
+}
+
+.icono-input {
+    width: 20px;
+    height: 20px;
+}
+
+.margin-login {
+    margin: 10%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.max-width800 {
+    max-width: 800px;
+}
+
+.color-violeta {
+    color: blueviolet;
+}
+
+.margin-top150 {
+    margin-top: 150px;
+}

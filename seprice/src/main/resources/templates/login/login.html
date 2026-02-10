@@ -15,38 +15,51 @@
 
 <body>
 
-  <div class="dos-columnas">
-    <div>
-      <h1>¡Bienvenido!</h1>
-      <h3>Inicia Sesión</h3>
-      <br>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="INGRESE SU USUARIO" aria-label="Username"
-          aria-describedby="basic-addon1">
+  <div class="centrado">
+    <div class="flex max-width800 margin-top150">
+      <div class="dos-columnas">
+        <div class="centrado margin30">
+          <div class="width-100">
+            <h1 class="centrado">¡Bienvenido!</h1>
+          </div>
+
+          <div class="width-100 margin-top20">
+            <h3 class="centrado">Inicia Sesión</h3>
+          </div>
+
+          <div class="input-group mb-3 margin-top20">
+            <span class="input-group-text" id="basic-addon1"><img class="icono-input" src="imagenes/usuario.png"
+                alt="usuario"></span>
+            <input type="text" class="form-control" placeholder="INGRESE SU USUARIO" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><img class="icono-input" src="imagenes/candado.png"
+                alt="candado"></span>
+            <input type="password" class="form-control" placeholder="INGRESE SU CONTRASEÑA" aria-label="Password"
+              aria-describedby="basic-addon1">
+          </div>
+
+
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault">
+            <label class="form-check-label margin-right30" for="checkDefault">
+              Recuerdame
+            </label>
+
+            <label class="color-violeta">
+              ¿Olvidaste la contraseña?
+            </label>
+          </div>
+          <button type="button" class="btn btn-success">INGRESAR</button>
+        </div>
+
+        <img class="flex" style="width: 350px;" src="imagenes/login.png" alt="login">
+
       </div>
-
-
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="INGRESE SU CONTRASEÑA" aria-label="Password"
-          aria-describedby="basic-addon1">
-      </div>
-
-      <div class="form-check text-start my-3"> 
-        <input class="form-check-input" type="checkbox" value="remember-me"
-          id="checkDefault"> 
-          <label class="form-check-label" for="checkDefault">
-          Recuerdame
-        </label>
-        <label class="" for="">
-          ¿Olvidaste la contraseña?
-        </label>
-      </div>
-
-
     </div>
-    <img src="imagenes/login.png" alt="login">
   </div>
 
 
