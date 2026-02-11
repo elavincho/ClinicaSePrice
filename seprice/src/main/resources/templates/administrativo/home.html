@@ -19,53 +19,118 @@
     <!-- <div th:insert="~{usuario/templateAdministrativo.html::header-inicial}" th:if="${sesion==null}"></div> -->
     <!-- <div th:insert="~{usuario/templateAdministrativo.html::header-user}" th:unless="${sesion==null}"></div> -->
     <div th:insert="~{administrativo/template_administrativo.html::navbar-administrativo}"></div>
+    <br>
+
 
     <!-- Main -->
     <main>
+
+        <div th:insert="~{administrativo/template_administrativo.html::header-administrativo}"></div>
 
         <div class="contenedor-exito">
             <div th:if="${exito}" class="alerta-exito" th:text="${exito}"></div>
         </div>
 
-        <div class="contenedor-seccion">
-            <div class="seccion-img">
-                <img src="imagenes/diagnostico.png" alt="">
-            </div>
-            <div class="seccion-texto">
-                <h1>Realizamos todo tipo de Diagnostico.</h1>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nisi fuga eligendi maxime nemo ex
-                    quam error molestias totam. Perferendis eius accusantium error assumenda nisi odit incidunt qui aut
-                    quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum ex, voluptates
-                    consequuntur voluptatum ad architecto rerum magnam vel deleniti impedit alias quibusdam facilis
-                    officiis. </p>
-                <br>
-                <p> Maxime ea
-                    consectetur minima molestias perspiciatis rem adipisci error enim repellendus quae inventore eum
-                    possimus magni earum architecto, repellat suscipit impedit. Animi!</p>
+        <div class="width-100 margin-top20">
+            <div class="dos-columnas-20-80">
+                <div class="columna-sidebar">
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">AGENDA </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">PACIENTES </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">TURNOS </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">MÉDICOS </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">CONSULTORIOS </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">SALA DE ESPERA </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">ESPECIALIDAD </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                    <div class="dos-columnas-70-30 boton-sidebar">
+                        <p class="texto-sidebar">LISTAR PACIENTES AT. POR MÉDICO </p>
+                        <div class="contenedor-img-btn-sidebar">
+                            <img class="img-btn-sidebar" th:src="@{/imagenes/agenda.png}" alt="agenda">
+                        </div>
+                    </div>
+                </div>
+ 
+ 
+                <div class="columna-principal">
+                    <div class="dos-columnas">
+                        <img class="img-principal padding10 margin-top20"
+                            th:src="@{/imagenes/administracion-clinica.png}" alt="img-principal">
+
+                        <div class="dos-columnas margin10">
+
+                            <div class="tarjeta-naranja">
+                                <h6 class="texto-tarjeta">TURNOS DEL DÍA</h6>
+                                <h3 class="numero-tarjeta">462</h3>
+                            </div>
+
+                            <div class="tarjeta-verde">
+                                <h6 class="texto-tarjeta">TURNOS ACREDITADOS</h6>
+                                <h3 class="numero-tarjeta">226</h3>
+                            </div>
+
+                            <div class="tarjeta-naranja">
+                                <h6 class="texto-tarjeta">EN CONSULTORIO</h6>
+                                <h3 class="numero-tarjeta">23</h3>
+                            </div>
+
+                            <div class="tarjeta-verde">
+                                <h6 class="texto-tarjeta">ATENCIÓN FINALIZADA</h6>
+                                <h3 class="numero-tarjeta">168</h3>
+                            </div>
+
+                            <div class="tarjeta-naranja">
+                                <h6 class="texto-tarjeta">EN SALA DE ESPERA</h6>
+                                <h3 class="numero-tarjeta">35</h3>
+                            </div>
+
+                            <div class="tarjeta-naranja">
+                                <h6 class="texto-tarjeta">CONSULTORIOS DISPONIBLES</h6>
+                                <h3 class="numero-tarjeta">5</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
         </div>
 
-        <br>
-
-        <div class="contenedor-seccion">
-            <div class="seccion-texto">
-                <h1>Asesoramiento Técnico.</h1>
-                <br>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus, vero architecto possimus
-                    dolorem ipsa, nesciunt dignissimos nobis aut labore rerum voluptates nostrum quam distinctio
-                    consequatur et cum animi dolore? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nisi fuga eligendi maxime nemo ex
-                    quam error molestias totam. Perferendis eius accusantium error assumenda nisi odit incidunt qui aut
-                    quasi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo eum ex, voluptates
-                    consequuntur voluptatum ad architecto rerum magnam vel deleniti impedit alias quibusdam facilis
-                    officiis. </p>
-            </div>
-            <div class="seccion-img">
-                <img src="imagenes/reparacion.jpg" alt="">
-            </div>
-        </div>
     </main>
 
 

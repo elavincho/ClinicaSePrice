@@ -19,11 +19,11 @@
                 </a>
                 <a class="link-a" th:href="@{/}"><img class="icono-header" th:src="@{/imagenes/agenda.png}"
                         alt="agenda">
-                    <p> Agenda </p>
+                    <p> Agenda Médica</p>
                 </a>
                 <a class="link-a" th:href="@{/}"><img class="icono-header" th:src="@{/imagenes/registrar-medico.png}"
                         alt="registrar-medico">
-                    <p>Registrar Medico</p>
+                    <p>Registrar Médico</p>
                 </a>
                 <a class="link-a" th:href="@{/}"><img class="icono-header" th:src="@{/imagenes/asignar-consultorio.png}"
                         alt="asignar-consultorio">
@@ -43,7 +43,7 @@
                 </a>
                 <a class="link-a" th:href="@{/}"><img class="icono-header" th:src="@{/imagenes/llamar-consultorio.png}"
                         alt="llamar-consultorio">
-                    <p>llamar a Consultorio</p>
+                    <p>Llamar a Consultorio</p>
                 </a>
 
             </div>
@@ -51,7 +51,22 @@
     </navbar>
 </div>
 
+<div th:fragment="header-administrativo">
+    <div class="dos-columnas-70-30 borde-verde">
+        <div class="primera-columna">
+            <h1 class="width-100 margin-left10">CONSULTORIOS EXTERNOS</h1>
+            <h3 class="margin-left10">ADMINISTRACIÓN</h3>
+        </div>
 
+        <div class="segunda-columna">
+            <div class="contenedor-img">
+                <img class="img-header" th:src="@{/imagenes/perfil-usuario.png}" alt="perfil-usuario">
+            </div>
+
+            <h6 class="margin-right10">Bienvenido [usuario]</h6>
+        </div>
+    </div>
+</div>
 
 
 
