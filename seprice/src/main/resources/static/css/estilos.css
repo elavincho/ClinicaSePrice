@@ -266,9 +266,15 @@ main {
     align-content: center;
     margin-left: 5px;
     font-size: 10px;
+    font-weight: 500;
 }
 
 a {
     text-decoration: none;
+}
+
+.border {
+    border: solid 2px;
+    filter: drop-shadow(2px 2px 3px rgb(11, 156, 76));
 }
 
