@@ -202,7 +202,7 @@ main {
     align-items: center;
     text-align: center;
     border-radius: 5px;
-    background-color: rgb(238, 164, 68);
+    background-color: rgb(253, 190, 106);
     width: 150px;
     height: 110px;
     margin-top: 10px;
@@ -217,7 +217,7 @@ main {
     align-items: center;
     text-align: center;
     border-radius: 5px;
-    background-color: rgb(6, 185, 132);
+    background-color: rgba(6, 185, 131, 0.7);
     width: 150px;
     height: 110px;
     margin-top: 10px;
